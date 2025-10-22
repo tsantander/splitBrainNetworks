@@ -73,18 +73,21 @@ if [ $nRest -eq 1 ]; then
 		-s 4x2x1vox \
 		-f 6x4x2 \
 		-u 0 \
+		-x [${coregMaskT1},${coregMaskEPI}] \
 		-t Rigid[0.10] \
 		-m Mattes[${ssT1},${meanRestEPI},1,32,Regular,0.30] \
 		-c [12000x12000x11110,1e-8,20] \
 		-s 4x2x1vox \
 		-f 3x2x1 \
 		-u 0 \
+		-x [${coregMaskT1},${coregMaskEPI}] \
 		-t Affine[0.10] \
 		-m Mattes[${ssT1},${meanRestEPI},1,32,Regular,0.30] \
 		-c [12000x12000x11110,1e-8,20] \
 		-s 4x2x1vox \
 		-f 3x2x1 \
 		-u 0 \
+		-x [${coregMaskT1},${coregMaskEPI}] \
 		-t SyN[0.20,3,0] \
 		-m Mattes[${ssT1},${meanRestEPI},0.5,32] \
 		-m CC[${ssT1},${meanRestEPI},0.5,4] \
@@ -92,6 +95,7 @@ if [ $nRest -eq 1 ]; then
 		-s 1x0.5x0vox \
 		-f 4x2x1 \
 		-u 0 \
+		-x [${coregMaskT1},${coregMaskEPI}] \
 		-w [0.025,0.975] \
 		-z 1 \
 		-v 1
@@ -127,18 +131,21 @@ else
 			-s 4x2x1vox \
 			-f 6x4x2 \
 			-u 0 \
+			-x [${coregMaskT1},${coregMaskEPI}] \
 			-t Rigid[0.10] \
 			-m Mattes[${ssT1},${meanRestEPI},1,32,Regular,0.30] \
 			-c [12000x12000x11110,1e-8,20] \
 			-s 4x2x1vox \
 			-f 3x2x1 \
 			-u 0 \
+			-x [${coregMaskT1},${coregMaskEPI}] \
 			-t Affine[0.10] \
 			-m Mattes[${ssT1},${meanRestEPI},1,32,Regular,0.30] \
 			-c [12000x12000x11110,1e-8,20] \
 			-s 4x2x1vox \
 			-f 3x2x1 \
 			-u 0 \
+			-x [${coregMaskT1},${coregMaskEPI}] \
 			-t SyN[0.20,3,0] \
 			-m Mattes[${ssT1},${meanRestEPI},0.5,32] \
 			-m CC[${ssT1},${meanRestEPI},0.5,4] \
@@ -146,6 +153,7 @@ else
 			-s 1x0.5x0vox \
 			-f 4x2x1 \
 			-u 0 \
+			-x [${coregMaskT1},${coregMaskEPI}] \
 			-w [0.025,0.975] \
 			-z 1 \
 			-v 1
@@ -385,7 +393,7 @@ else
 			-n LanczosWindowedSinc \
 			-o "${pathToEPI}/au${patID}_restWarped_run-$(printf %02d ${iRun}).nii.gz" \
 			-t "${pathToT1}/anat2mni_1Warp.nii.gz" \
-			-t "${pathToT1}/anat/anat2mni_0GenericAffine.mat" \
+			-t "${pathToT1}/anat2mni_0GenericAffine.mat" \
 			-t "${PWD}/meanEPI/mean2anat_rest_run-$(printf %02d ${iRun})_1Warp.nii.gz" \
 			-t "${PWD}/meanEPI/mean2anat_rest_run-$(printf %02d ${iRun})_0GenericAffine.mat" \
 			-v 1
