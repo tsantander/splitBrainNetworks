@@ -328,7 +328,7 @@ if [ $nRest -eq 1 ]; then
 		
 else
 
-	for jRun in $(seq 1 $nRest); do
+	for iRun in $(seq 1 $nRest); do
 
 		meanRestEPI="${PWD}/meanEPI/meanRestN3_run-$(printf %02d ${iRun}).nii.gz"
 		
