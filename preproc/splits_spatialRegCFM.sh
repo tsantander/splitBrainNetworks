@@ -258,7 +258,7 @@ ImageMath 3 "${pathToT1}/wmEroded.nii.gz" ME "${pathToT1}/wmMask.nii.gz" 1
 	
 # Finish additional transformations depending on the number of EPIs collected.
 
-if [ $numEO -eq 1 ]; then
+if [ $nRest -eq 1 ]; then
 	
 	# CSF mask + additional erosion.
 	
