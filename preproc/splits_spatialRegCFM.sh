@@ -66,7 +66,7 @@ if [ $nRest -eq 1 ]; then
 	
 	antsRegistration -d 3 \
 		-o "${PWD}/meanEPI/mean2anat_rest_" \
-		-r [${ssT1},${meanRestEPI},1] \
+		-r [${ssT1},${meanRestEPI},0] \
 		-t Translation[0.10] \
 		-m Mattes[${ssT1},${meanRestEPI},1,32,Regular,0.30] \
 		-c [12000x12000x11110,1e-8,20] \
