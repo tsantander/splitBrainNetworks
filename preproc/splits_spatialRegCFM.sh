@@ -26,7 +26,7 @@ nRest=$3
 
 # Make sure we're in the right directory.
 
-cd "/zwork/tyler/splitMRI/data/${subID}"
+cd "/zwork/tyler/splitMRI/data/${patID}"
 
 # Register mean EPIs to skull-stripped T1.
 #-----------------------------------------------------------------------------------------
