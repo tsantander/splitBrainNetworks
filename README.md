@@ -1,5 +1,5 @@
 # splitBrainNetworks
-Preprocessing and analysis code for 'Full interhemispheric integration sustained by a fraction of posterior callosal fibers', out now at PNAS.
+Preprocessing and analysis code for 'Full interhemispheric integration sustained by a fraction of posterior callosal fibers'.
 
 Callosotomy patient imaging data (raw and/or various derivatives) can be made available upon reasonable request.
 
